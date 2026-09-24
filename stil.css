@@ -1,0 +1,56 @@
+/* Schlichte Seite, hell wie dunkel lesbar. Bewusst ohne fremde Schriften oder Skripte:
+   Die Seite soll niemanden nachladen, den sie nicht braucht. */
+:root {
+  --bg: #f6f3ec;
+  --panel: #fffdf8;
+  --ink: #2c2925;
+  --ink-soft: #6b655c;
+  --line: #e7e1d5;
+  --accent: #5f9d6b;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171614;
+    --panel: #211f1c;
+    --ink: #ece7df;
+    --ink-soft: #b7b0a5;
+    --line: #36322d;
+    --accent: #6fb47c;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3rem 1rem 5rem;
+}
+h1 { font-size: 2rem; letter-spacing: -.01em; margin: 0 0 .5rem; }
+h2 { font-size: 1.15rem; margin: 2.2rem 0 .4rem; }
+h3 { font-size: 1rem; margin: 1.6rem 0 .3rem; }
+p, ul { margin: .6rem 0; }
+ul { padding-left: 1.2rem; }
+li { margin: .3rem 0; }
+.lead { color: var(--ink-soft); }
+a { color: var(--accent); }
+code {
+  font-size: .9em;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0 .25em;
+}
+.zurueck { margin: 0 0 1.5rem; font-size: .9rem; }
+.fuss {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: .9rem;
+}
